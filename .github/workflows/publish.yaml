@@ -15,7 +15,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v1
+        uses: gradle/gradle-build-action@v3
 
       - name: Setup Node.js 18.x
         uses: actions/setup-node@v4

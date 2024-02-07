@@ -111,16 +111,10 @@ tasks.dokkaHtml {
     }
 }
 
-tasks.register<Jar>("dokkaHtmlJar") {
+val htmlJar by tasks.register<Jar>("dokkaHtmlJar") {
     dependsOn(tasks.dokkaHtml)
     from(tasks.dokkaHtml.flatMap { it.outputDirectory })
     archiveClassifier = "html-docs"
-}
-
-val javadocJar by tasks.register<Jar>("dokkaJavadocJar") {
-    dependsOn(tasks.dokkaJavadoc)
-    from(tasks.dokkaJavadoc.flatMap { it.outputDirectory })
-    archiveClassifier = "javadoc"
 }
 
 tasks.withType<DokkaTask>().configureEach {
@@ -145,7 +139,7 @@ publishing {
 
     publications {
         register<MavenPublication>("GitHub") {
-            artifact(javadocJar)
+            artifact(htmlJar)
 
             pom {
                 name = "test-engine"

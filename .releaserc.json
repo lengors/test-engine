@@ -1,0 +1,51 @@
+{
+  "branches": [
+    "main",
+    {
+      "name": "beta",
+      "prerelease": true
+    },
+    {
+      "name": "alpha",
+      "prerelease": true
+    },
+    {
+      "name": "development",
+      "prerelease": true
+    }
+  ],
+  "plugins": [
+    "semantic-release-gitmoji",
+    [
+      "@semantic-release/exec",
+      {
+        "successCmd": "echo \"success=true\" >> \"$GITHUB_OUTPUT\"",
+        "failCmd": "echo \"success=false\" >> \"$GITHUB_OUTPUT\""
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "successCmd": "echo \"version=${nextRelease.version}\" >> \"$GITHUB_OUTPUT\""
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/github",
+    "gradle-semantic-release-plugin",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "CHANGELOG.md",
+          "gradle.properties"
+        ],
+        "message": ":rocket: update `package.json` to ${nextRelease.version} [skip release]\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+}

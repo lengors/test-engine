@@ -83,7 +83,10 @@ tasks.koverXmlReport {
 
 
 tasks.dokkaHtml {
-    val docsDir = projectDir.resolve("docs")
+    val docsDir = projectDir
+        .resolve("build")
+        .resolve("dokka")
+        .resolve("generated")
     val docVersionsDir = docsDir.resolve("version")
     val currentVersion = project.version.toString()
     val currentDocsDir = docVersionsDir.resolve(currentVersion)
@@ -96,7 +99,7 @@ tasks.dokkaHtml {
 
     doLast {
         docsDir
-            .resolve("current")
+            .resolve("docs")
             .apply {
                 deleteRecursively()
                 currentDocsDir.copyRecursively(this, overwrite = true)

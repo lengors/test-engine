@@ -1,5 +1,7 @@
 package io.github.lengors.core
 
 class Foo {
-    fun greetings(): String = "Hello, World!"
+    fun greetings() {
+        bar("World")
+    }
 }

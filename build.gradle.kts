@@ -83,7 +83,10 @@ tasks.koverXmlReport {
 
 
 tasks.dokkaHtml {
-    val docsDir = projectDir.resolve("docs")
+    val docsDir = projectDir
+        .resolve("build")
+        .resolve("dokka")
+        .resolve("generated")
     val docVersionsDir = docsDir.resolve("version")
     val currentVersion = project.version.toString()
     val currentDocsDir = docVersionsDir.resolve(currentVersion)
@@ -96,7 +99,7 @@ tasks.dokkaHtml {
 
     doLast {
         docsDir
-            .resolve("current")
+            .resolve("docs")
             .apply {
                 deleteRecursively()
                 currentDocsDir.copyRecursively(this, overwrite = true)
@@ -108,16 +111,10 @@ tasks.dokkaHtml {
     }
 }
 
-tasks.register<Jar>("dokkaHtmlJar") {
+val htmlJar by tasks.register<Jar>("dokkaHtmlJar") {
     dependsOn(tasks.dokkaHtml)
     from(tasks.dokkaHtml.flatMap { it.outputDirectory })
     archiveClassifier = "html-docs"
-}
-
-val javadocJar by tasks.register<Jar>("dokkaJavadocJar") {
-    dependsOn(tasks.dokkaJavadoc)
-    from(tasks.dokkaJavadoc.flatMap { it.outputDirectory })
-    archiveClassifier = "javadoc"
 }
 
 tasks.withType<DokkaTask>().configureEach {
@@ -136,43 +133,6 @@ publishing {
             credentials {
                 username = System.getenv("GITHUB_USERNAME")
                 password = System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-
-    publications {
-        register<MavenPublication>("GitHub") {
-            artifact(javadocJar)
-
-            pom {
-                name = "test-engine"
-                description = "Test Kotlin package"
-
-                licenses {
-                    license {
-                        name = "AGPL-3.0-only"
-                        url = "https://www.gnu.org/licenses/agpl-3.0.txt"
-                    }
-                }
-
-                url = "https://github.com/lengors/test-engine"
-
-                issueManagement {
-                    system = "Github"
-                    url = "https://github.com/lengors/test-engine/issues"
-                }
-
-                scm {
-                    connection = "https://github.com/lengors/test-engine.git"
-                    url = "https://github.com/lengors/test-engine"
-                }
-
-                developers {
-                    developer {
-                        name = "lengors"
-                        email = "24527258+lengors@users.noreply.github.com"
-                    }
-                }
             }
         }
     }

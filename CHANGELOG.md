@@ -1,3 +1,17 @@
+# v1.0.0 (2024-02-11)
+
+## ✨ New Features
+- [`8e3de27`](https://github.com/lengors/test-engine/commit/8e3de27)  Initialize project 
+- [`95ba2cf`](https://github.com/lengors/test-engine/commit/95ba2cf)  More project stuff 
+- [`c6430c0`](https://github.com/lengors/test-engine/commit/c6430c0)  Add ar function 
+- [`989f7a4`](https://github.com/lengors/test-engine/commit/989f7a4)  Fix build 
+- [`3767156`](https://github.com/lengors/test-engine/commit/3767156)  Fix build system 
+- [`b5d51c4`](https://github.com/lengors/test-engine/commit/b5d51c4)  Better build 
+- [`a15e8eb`](https://github.com/lengors/test-engine/commit/a15e8eb)  Fix build 
+
+## 🐛 Bug Fixes
+- [`5fe9c9e`](https://github.com/lengors/test-engine/commit/5fe9c9e)  Fix build file
+
 # [v1.0.0-development.8](https://github.com/lengors/test-engine/compare/v1.0.0-development.7...v1.0.0-development.8) (2024-02-11)
 
 ## ✨ New Features

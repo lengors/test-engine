@@ -139,8 +139,6 @@ publishing {
 
     publications {
         register<MavenPublication>("GitHub") {
-            artifact(htmlJar)
-
             pom {
                 name = "test-engine"
                 description = "Test Kotlin package"

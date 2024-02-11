@@ -1,3 +1,8 @@
+# [v1.0.0-development.8](https://github.com/lengors/test-engine/compare/v1.0.0-development.7...v1.0.0-development.8) (2024-02-11)
+
+## ✨ New Features
+- [`a15e8eb`](https://github.com/lengors/test-engine/commit/a15e8eb)  Fix build
+
 # [v1.0.0-development.7](https://github.com/lengors/test-engine/compare/v1.0.0-development.6...v1.0.0-development.7) (2024-02-11)
 
 ## ✨ New Features

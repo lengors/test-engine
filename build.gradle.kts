@@ -136,41 +136,6 @@ publishing {
             }
         }
     }
-
-    publications {
-        register<MavenPublication>("GitHub") {
-            pom {
-                name = "test-engine"
-                description = "Test Kotlin package"
-
-                licenses {
-                    license {
-                        name = "AGPL-3.0-only"
-                        url = "https://www.gnu.org/licenses/agpl-3.0.txt"
-                    }
-                }
-
-                url = "https://github.com/lengors/test-engine"
-
-                issueManagement {
-                    system = "Github"
-                    url = "https://github.com/lengors/test-engine/issues"
-                }
-
-                scm {
-                    connection = "https://github.com/lengors/test-engine.git"
-                    url = "https://github.com/lengors/test-engine"
-                }
-
-                developers {
-                    developer {
-                        name = "lengors"
-                        email = "24527258+lengors@users.noreply.github.com"
-                    }
-                }
-            }
-        }
-    }
 }
 
 signing {

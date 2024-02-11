@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:io.github.lengors.core////PointingToDeclaration/test-engine/io.github.lengors.core/index.html
+$dokka.location:io.github.lengors.core//bar/#kotlin.String/PointingToDeclaration/test-engine/io.github.lengors.core/bar.html
+$dokka.location:io.github.lengors.core/Foo///PointingToDeclaration/test-engine/io.github.lengors.core/-foo/index.html
+$dokka.location:io.github.lengors.core/Foo/Foo/#/PointingToDeclaration/test-engine/io.github.lengors.core/-foo/-foo.html
+$dokka.location:io.github.lengors.core/Foo/greetings/#/PointingToDeclaration/test-engine/io.github.lengors.core/-foo/greetings.html
+io.github.lengors.core
+

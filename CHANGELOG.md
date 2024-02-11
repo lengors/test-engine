@@ -1,3 +1,8 @@
+# [v1.0.0-development.5](https://github.com/lengors/test-engine/compare/v1.0.0-development.4...v1.0.0-development.5) (2024-02-11)
+
+## ✨ New Features
+- [`989f7a4`](https://github.com/lengors/test-engine/commit/989f7a4)  Fix build
+
 # [v1.0.0-development.4](https://github.com/lengors/test-engine/compare/v1.0.0-development.3...v1.0.0-development.4) (2024-02-11)
 
 ## ✨ New Features

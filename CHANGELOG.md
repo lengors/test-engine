@@ -1,3 +1,8 @@
+# [v1.0.0-development.6](https://github.com/lengors/test-engine/compare/v1.0.0-development.5...v1.0.0-development.6) (2024-02-11)
+
+## ✨ New Features
+- [`3767156`](https://github.com/lengors/test-engine/commit/3767156)  Fix build system
+
 # [v1.0.0-development.5](https://github.com/lengors/test-engine/compare/v1.0.0-development.4...v1.0.0-development.5) (2024-02-11)
 
 ## ✨ New Features

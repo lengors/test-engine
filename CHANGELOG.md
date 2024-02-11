@@ -1,3 +1,8 @@
+# [v1.0.0-development.4](https://github.com/lengors/test-engine/compare/v1.0.0-development.3...v1.0.0-development.4) (2024-02-11)
+
+## ✨ New Features
+- [`c6430c0`](https://github.com/lengors/test-engine/commit/c6430c0)  Add ar function
+
 # [v1.0.0-development.3](https://github.com/lengors/test-engine/compare/v1.0.0-development.2...v1.0.0-development.3) (2024-02-07)
 
 ## 🐛 Bug Fixes
